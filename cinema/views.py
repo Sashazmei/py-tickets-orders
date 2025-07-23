@@ -56,6 +56,7 @@ class MovieSessionViewSet(viewsets.ModelViewSet):
 
 # --- Generic Views (если используешь без router) ---
 
+
 class OrderListCreateView(generics.ListCreateAPIView):
     serializer_class = OrderSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -91,4 +92,3 @@ class MovieSessionListView(generics.ListAPIView):
 class MovieSessionDetailView(generics.RetrieveAPIView):
     queryset = MovieSession.objects.all()
     serializer_class = MovieSessionDetailSerializer
-
